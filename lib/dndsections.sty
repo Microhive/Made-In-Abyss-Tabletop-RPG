@@ -1,0 +1,45 @@
+\RequirePackage[titles]{tocloft}
+\RequirePackage[toc]{multitoc}
+\RequirePackage{titlesec}	% Used to adjust (sub)section formatting
+
+%Remove Numbering (If you want Numbering set secnumdepth to the appropriate depth)
+\setcounter{secnumdepth}{-1}
+
+% Chapter
+\titleformat{\chapter}
+{\color{titlered}\dnd@TitleFont\Huge}{\thechapter\quad}{0pt}{}
+
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+
+\renewcommand\cftchapfont{\color{titlered}\dnd@TitleFont\bfseries}
+
+% Section
+\titleformat{\section}
+{\color{titlered}\dnd@TitleFont\LARGE}{\thesection\quad}{0pt}{}
+
+% Subsection
+\titleformat{\subsection}
+{\color{titlered}\dnd@TitleFont\Large}{\thesubsection\quad}{0pt}{}
+[\titleline{\color{titlegold}\titlerule[1pt]}]
+
+% Subsubsection
+\titleformat{\subsubsection}
+{\color{titlered}\dnd@TitleFont\large}{\thesubsubsection\quad}{0pt}{}[]
+
+% Paragraph
+\titleformat{\paragraph}[runin]
+{\normalfont\normalsize\bfseries\slshape}{\theparagraph\quad}{0pt}{}[.]
+\titlespacing*{\paragraph}
+{0pt}{\parskip}{\wordsep}
+
+% Subparagraph
+\titleformat{\subparagraph}[runin]
+{\normalfont\normalsize\bfseries\slshape}{\thesubparagraph\quad}{0pt}{}[.]
+\titlespacing*{\subparagraph}
+{\parindent}{\parskip}{\wordsep}
+
+% Special command for magic items, traps, and the like.
+\newcommand{\subtitlesection}[2]{
+	\subsubsection{#1}\vspace{-1ex}
+	\textit{#2}\vspace{1ex}\par
+	} 
