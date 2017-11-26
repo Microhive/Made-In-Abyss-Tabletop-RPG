@@ -27,12 +27,13 @@
 % bg-print  : Use fancy footer but not background.
 % bg-none   : No paper background and plain footer.
 % justified : Use full justification for text layout instead of ragged right.
+\usepackage{standalone}
 \usepackage{dnd}
 \usepackage{mwe}
 \usepackage{afterpage}
 \usepackage{adjustbox}
 \usepackage{bbding}
-\usepackage{hyperref}
+%\usepackage{hyperref}
 \usepackage{graphicx} % Required for including images
 \usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
 \usepackage{pdfpages}
@@ -43,10 +44,10 @@
 
 % Start document
 \begin{document}
-\include{Cover}
-\include{Foreword}
-\include{Delvers}
-\include{DescendingTheAbyss}
-\include{CurseOfTheAbyss}
-\include{PlayingTheGame}
+%\include{0.Cover}
+%\include{1.Foreword}
+\include{2.Delvers}
+\include{3.DescendingTheAbyss}
+\include{4.CurseOfTheAbyss}
+\include{5.PlayingTheGame}
 \end{document}
